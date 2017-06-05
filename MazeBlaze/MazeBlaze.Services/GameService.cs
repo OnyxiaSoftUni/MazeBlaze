@@ -13,7 +13,7 @@ namespace MazeBlaze.Services
     public static class GameService
     {
         private static List<Character> loadedCharacters = null;
-        private static Character currentCharacter = null;
+        public static Character currentCharacter = null;
         private const string savesDirectory = "Saves";
         private const string saveFilePath = savesDirectory + "\\" + "saves.json";
 

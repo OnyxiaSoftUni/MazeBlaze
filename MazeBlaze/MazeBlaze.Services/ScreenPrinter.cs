@@ -77,7 +77,6 @@ namespace MazeBlaze.Services
                 Console.SetCursorPosition(col + width - 1, row + i);
                 Console.Write('#');
             }
-
             Console.ForegroundColor = ConsoleColor.White;
         }
     }

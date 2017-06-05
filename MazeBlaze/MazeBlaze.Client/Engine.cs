@@ -14,7 +14,7 @@ namespace MazeBlaze.Client
 
         public static void Run()
         {
-            //GameService.CreateDummySave(); //Use this to create a dummy test.
+            //GameService.CreateDummySave(); //Use this to create a dummy save.
             InitializeData();
             ShowWelcomeScreen();
             ExecuteWelcomeScreenSelection(currentPossition);
