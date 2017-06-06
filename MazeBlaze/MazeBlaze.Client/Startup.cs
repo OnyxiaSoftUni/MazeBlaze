@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MazeBlaze.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace MazeBlaze.Client
             Console.SetBufferSize(100, 30);
             Console.ForegroundColor = ConsoleColor.White;
             Engine.Run();
+            Console.Clear(); 
+            Field.LevelBuild();
         }
     }
 }
