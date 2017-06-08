@@ -10,7 +10,7 @@ namespace MazeBlaze.Client
 {
     public class Engine
     {
-        private static int currentPossition = 0;
+        public static int currentPossition = 0;
 
         public static void Run()
         {
@@ -22,18 +22,18 @@ namespace MazeBlaze.Client
 
         private static void ExecuteWelcomeScreenSelection(int currentPossition)
         {
-            switch (currentPossition)
+            switch (currentPossition)//TODO Add back functionality
             {
-                case 0:
-                    //TODO CREATE NEW CHARACTER SCREEN
+                case 0://NEW CHARACTER CREATION
+                    ScreenPrinter.CreateNewCharacter();
                     break;
 
-                case 1:
-                    //TODO CREATE LOAD CHARACTER SCREEN
+                case 1://LOAD CHARACTER SCREEN
+                    ScreenPrinter.LoadCharacters(0);
                     break;
 
-                case 2:
-                    //TODO CREATE HIGHSCORES SCREEN
+                case 2://HIGHSCORES SCREEN
+                    ScreenPrinter.ShowHighscores();
                     break;
 
                 case 3:

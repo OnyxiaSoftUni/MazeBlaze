@@ -13,9 +13,10 @@ namespace MazeBlaze.Client
         {
             Console.SetWindowSize(100, 30);
             Console.SetBufferSize(100, 30);
+            Console.CursorVisible = false;
             Console.ForegroundColor = ConsoleColor.White;
             Engine.Run();
-            Console.Clear(); 
+            Console.Clear();
             Field.LevelBuild();
         }
     }

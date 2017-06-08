@@ -12,7 +12,7 @@ namespace MazeBlaze.Services
 {
     public static class GameService
     {
-        private static List<Character> loadedCharacters = null;
+        public static List<Character> loadedCharacters = null;
         public static Character currentCharacter = null;
         private const string savesDirectory = "Saves";
         private const string saveFilePath = savesDirectory + "\\" + "saves.json";
@@ -79,7 +79,8 @@ namespace MazeBlaze.Services
                 Name = "Gosho",
                 Exp = 140,
                 Level = 3,
-                MaxStage = 4
+                MaxStage = 4,
+                HighScore = 131232
             };
 
             Character pesho = new Character
@@ -87,7 +88,8 @@ namespace MazeBlaze.Services
                 Name = "Pesho",
                 Exp = 3200,
                 Level = 5,
-                MaxStage = 7
+                MaxStage = 7,
+                HighScore = 6455
             };
 
             Character lisa = new Character
@@ -95,7 +97,8 @@ namespace MazeBlaze.Services
                 Name = "Lisa",
                 Exp = 0,
                 Level = 1,
-                MaxStage = 1
+                MaxStage = 1,
+                HighScore = 98549
             };
 
             dummyList.Add(gosho);
@@ -128,6 +131,16 @@ namespace MazeBlaze.Services
             {
                 throw;
             }
+        }
+
+        internal static void DeleteSavedCharacter(string name)
+        {
+            var chara = loadedCharacters.FirstOrDefault(c => c.Name == name);
+            if (currentCharacter == chara)
+            {
+                currentCharacter = null;
+            }
+            loadedCharacters.Remove(chara);
         }
     }
 }
